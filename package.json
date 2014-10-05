@@ -1,6 +1,6 @@
 {
-  "name": "jsontest",
-  "version": "0.0.0",
+  "name": "json.services",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -15,5 +15,11 @@
     "jade": "~1.6.0",
     "morgan": "~1.3.0",
     "serve-favicon": "~2.1.3"
+  },
+  "devDependencies": {
+    "should": "*",
+    "superagent": "*",
+    "supertest": "*",
+    "mocha": "*"
   }
 }
