@@ -1,5 +1,108 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .jumbotron
+    h2 JSON.Services
+    p.lead
+      | is a testing platform for services utilizing #[a(href='http://en.wikipedia.org/wiki/JSON', target='_blank') JavaScript Object Notation (JSON)]. 
+      br
+      | To use, make a request to #[b servicename].json.services, where servicename is the name of a service listed below
+  .row
+    .col-lg-12
+      h3 Services
+      h4 
+        a(href='//cookie.json.services') Cookie
+      a(href='//cookie.json.services/?foo=bar') /?foo=bar
+      .highlight
+        pre
+         code.json
+          |{ "foo": "bar" }
+      a(href='//cookie.json.services/?baz=qux') /?baz=qux
+      .highlight
+        pre
+         code.json
+          |{
+          |  "foo": "bar",
+          |  "baz": "qux"
+          |}
+      h4 
+        a(href='//date.json.services') Date
+      .highlight
+        pre
+         code.json
+          |{
+          |  "date":"2014-10-05",
+          |  "time":"05:23:26",
+          |  "datetime":"Sun Oct 05 2014 05:23:26 GMT+0000 (UTC)",
+          |  "timestamp":1412486606823
+          |}
+      h4 
+        a(href='//echo.json.services') Echo
+      a(href='//echo.json.services/?foo=bar&baz=qux') /?foo=bar&baz=qux
+      .highlight
+        pre
+         code.json
+          |{
+          |  "foo": "bar",
+          |  "baz": "qux"
+          |}
+      h4 
+        a(href='//header.json.services') Header
+      .highlight
+        pre
+         code.json
+          |{
+          |  "host":"header.json.services",
+          |  "connection":"close",
+          |  "accept":"text/html,
+          |  application/xhtml+xml,
+          |  application/xml;q=0.9,image/webp,*/*;q=0.8",
+          |  "user-agent":"Mozilla/5.0 Chrome/35.0.1916.153 Safari/537.36",
+          |  "dnt":"1",
+          |  "accept-encoding":"gzip,deflate,sdch",
+          |  "accept-language":"pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4",
+          |  "if-none-match":"W/\"257-54e379f9\"",
+          |  "x-request-id":"fdea9df3-38a2-445e-bc83-df60b7876f60",
+          |  "x-forwarded-for":"189.7.19.180",
+          |  "x-forwarded-proto":"http",
+          |  "x-forwarded-port":"80",
+          |  "via":"1.1 vegur",
+          |  "connect-time":"1",
+          |  "x-request-start":"1412485654242",
+          |  "total-route-time":"0"
+          |}}
+      h4 
+        a(href='//ip.json.services') IP
+      .highlight
+        pre
+         code.json
+          |{ "ip": "54.243.74.12" }
+      h4 
+        a(href='//md5.json.services') MD5
+      a(href='//md5.json.services/?original=JSON') /?original=JSON
+      .highlight
+        pre
+         code.json
+          |{
+          |  "md5": "0ecd11c1d7a287401d148a23bbd7a2f8",
+          |  "original": "JSON"
+          |}
+      h4 
+        a(href='//sha1.json.services') SHA1
+      a(href='//sha1.json.services/?original=JSON') /?original=JSON
+      .highlight
+        pre
+         code.json
+          |{
+          |  "sha1": "031a4e76f0b39d0df073d934da5fc48da8d737e5",
+          |  "original": "JSON"
+          |}
+      h4 
+        a(href='//404.json.services') 404
+      .highlight
+        pre
+         code.json
+          |{ "status": "404" }
+      h3 New Features
+      p To request new features, please visit #[a(href='https://github.com/Falci/json.services/issues/', target='_blank') issues page].
+      p Pull requests are wellcome.

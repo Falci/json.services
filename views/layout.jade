@@ -2,6 +2,19 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/docs.min.css')
+    link(rel='stylesheet', href='/css/style.css')
   body
-    block content
+    .container
+      .header
+        ul.nav.nav-pills.pull-right
+          li.active
+            a(href='/') Home
+          li
+            a(href='https://github.com/Falci/json.services', target='_blank') Github
+        h3.text-muted JSON.Services
+      // /container
+      block content
+      .footer
+        p © Falci 2014
