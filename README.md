@@ -89,7 +89,7 @@ To use, make a request to **servicename**.json.services, where servicename is th
 }
 ```
 #### 404 ####
-[http://4040.json.services](http://md5.json.services)
+[http://404.json.services](http://404.json.services)
 ```
 { "status": "404" }
 ```
